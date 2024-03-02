@@ -11,12 +11,14 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/bin/fuelgauged_nvram:$(TARGET_COPY_OUT_VENDOR)/bin/fuelgauged_nvram \
     vendor/xiaomi/earth/proprietary/vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek \
     vendor/xiaomi/earth/proprietary/vendor/bin/hw/android.hardware.keymaster@4.1-service.beanpod:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.1-service.beanpod \
+    vendor/xiaomi/earth/proprietary/vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.usb@1.2-service-mediatekv2 \
     vendor/xiaomi/earth/proprietary/vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.nvram@1.1-service \
     vendor/xiaomi/earth/proprietary/vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.pq@2.2-service \
     vendor/xiaomi/earth/proprietary/vendor/bin/nvram_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/nvram_daemon \
     vendor/xiaomi/earth/proprietary/vendor/bin/teei_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/teei_daemon \
     vendor/xiaomi/earth/proprietary/vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc \
     vendor/xiaomi/earth/proprietary/vendor/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc \
+    vendor/xiaomi/earth/proprietary/vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc \
     vendor/xiaomi/earth/proprietary/vendor/etc/init/fuelgauged_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_init.rc \
     vendor/xiaomi/earth/proprietary/vendor/etc/init/fuelgauged_nvram_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_nvram_init.rc \
     vendor/xiaomi/earth/proprietary/vendor/etc/init/microtrust.bp_kmsetkey_ca.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/microtrust.bp_kmsetkey_ca.rc \
@@ -203,3 +205,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/thh/ta/e97c270ea5c44c58bcd3384a2fa2539e.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/e97c270ea5c44c58bcd3384a2fa2539e.ta \
     vendor/xiaomi/earth/proprietary/vendor/thh/ta/fc32e4da17d342449b01c992d56d71bf.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/fc32e4da17d342449b01c992d56d71bf.ta \
     vendor/xiaomi/earth/proprietary/vendor/thh/ta/isee_model.json:$(TARGET_COPY_OUT_VENDOR)/thh/ta/isee_model.json
+
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.2-service-mediatekv2
