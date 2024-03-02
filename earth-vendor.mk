@@ -12,9 +12,11 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.nvram@1.1-service \
     vendor/xiaomi/earth/proprietary/vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.pq@2.2-service \
     vendor/xiaomi/earth/proprietary/vendor/bin/nvram_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/nvram_daemon \
+    vendor/xiaomi/earth/proprietary/vendor/bin/teei_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/teei_daemon \
     vendor/xiaomi/earth/proprietary/vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc \
     vendor/xiaomi/earth/proprietary/vendor/etc/init/fuelgauged_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_init.rc \
     vendor/xiaomi/earth/proprietary/vendor/etc/init/fuelgauged_nvram_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_nvram_init.rc \
+    vendor/xiaomi/earth/proprietary/vendor/etc/init/microtrust.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/microtrust.rc \
     vendor/xiaomi/earth/proprietary/vendor/etc/init/nvram_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/nvram_daemon.rc \
     vendor/xiaomi/earth/proprietary/vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc \
     vendor/xiaomi/earth/proprietary/vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc \
@@ -32,6 +34,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/lib/libDefaultFpsActor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libDefaultFpsActor.so \
     vendor/xiaomi/earth/proprietary/vendor/lib/libFrameRecord.so:$(TARGET_COPY_OUT_VENDOR)/lib/libFrameRecord.so \
     vendor/xiaomi/earth/proprietary/vendor/lib/libNoFpsActor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libNoFpsActor.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib/libTEECommon.so:$(TARGET_COPY_OUT_VENDOR)/lib/libTEECommon.so \
     vendor/xiaomi/earth/proprietary/vendor/lib/libaal_cust.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaal_cust.so \
     vendor/xiaomi/earth/proprietary/vendor/lib/libaal_key.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaal_key.so \
     vendor/xiaomi/earth/proprietary/vendor/lib/libaal_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaal_mtk.so \
@@ -45,6 +48,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/lib/libgralloc_extra.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgralloc_extra.so \
     vendor/xiaomi/earth/proprietary/vendor/lib/libgralloc_metadata.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgralloc_metadata.so \
     vendor/xiaomi/earth/proprietary/vendor/lib/libgralloctypes_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgralloctypes_mtk.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib/libimsg_log.so:$(TARGET_COPY_OUT_VENDOR)/lib/libimsg_log.so \
     vendor/xiaomi/earth/proprietary/vendor/lib/libion_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libion_mtk.so \
     vendor/xiaomi/earth/proprietary/vendor/lib/libion_ulit.so:$(TARGET_COPY_OUT_VENDOR)/lib/libion_ulit.so \
     vendor/xiaomi/earth/proprietary/vendor/lib/libladder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libladder.so \
@@ -55,6 +59,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/lib/libpqframework.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpqframework.so \
     vendor/xiaomi/earth/proprietary/vendor/lib/libpqparamparser.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpqparamparser.so \
     vendor/xiaomi/earth/proprietary/vendor/lib/libpqpconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpqpconfig.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib/libteei_daemon_vfs.so:$(TARGET_COPY_OUT_VENDOR)/lib/libteei_daemon_vfs.so \
     vendor/xiaomi/earth/proprietary/vendor/lib/libudf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libudf.so \
     vendor/xiaomi/earth/proprietary/vendor/lib/libdpframework.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdpframework.so \
     vendor/xiaomi/earth/proprietary/vendor/lib/libmtk_drvb.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtk_drvb.so \
@@ -100,6 +105,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libDefaultFpsActor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libDefaultFpsActor.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libFrameRecord.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libFrameRecord.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libNoFpsActor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libNoFpsActor.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libTEECommon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTEECommon.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libaal_cust.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaal_cust.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libaal_key.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaal_key.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libaal_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaal_mtk.so \
@@ -114,6 +120,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libgralloc_extra.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgralloc_extra.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libgralloc_metadata.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgralloc_metadata.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libgralloctypes_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgralloctypes_mtk.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libimsg_log.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libimsg_log.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libion_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libion_mtk.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libion_ulit.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libion_ulit.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libladder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libladder.so \
@@ -124,6 +131,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libpqframework.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpqframework.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libpqparamparser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpqparamparser.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libpqpconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpqpconfig.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libteei_daemon_vfs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libteei_daemon_vfs.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libthha.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthha.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libudf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libudf.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libdpframework.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdpframework.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libmtk_drvb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtk_drvb.so \
@@ -154,4 +163,38 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.pq@2.6.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.pq@2.6.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.pq@2.7.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.pq@2.7.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.pq@2.8.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.pq@2.8.so \
-    vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.pq@2.9.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.pq@2.9.so
+    vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.pq@2.9.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.pq@2.9.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/wechat.beanpod.so:$(TARGET_COPY_OUT_VENDOR)/lib64/wechat.beanpod.so \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/0102030405060708090a0b0c0d0e0f10.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/0102030405060708090a0b0c0d0e0f10.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/020b0000000000000000000000000000.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/020b0000000000000000000000000000.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/020f0000000000000000000000000000.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/020f0000000000000000000000000000.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/05120000000000000000000000000000.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/05120000000000000000000000000000.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/06090000000000000000000000000000.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/06090000000000000000000000000000.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/07060000000000000000000000007169.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/07060000000000000000000000007169.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/08010203000000000000000000000000.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/08010203000000000000000000000000.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/08020000000000000000000000007169.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/08020000000000000000000000007169.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/08030000000000000000000000000000.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/08030000000000000000000000000000.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/08070000000000000000000000008270.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/08070000000000000000000000008270.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/08110000000000000000000000000000.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/08110000000000000000000000000000.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/09010000000000000000000000000000.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/09010000000000000000000000000000.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/09030000000000000000000000008270.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/09030000000000000000000000008270.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/14498ace2a8f11e880c8509a4c146f4c.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/14498ace2a8f11e880c8509a4c146f4c.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/3d08821c33a611e6a1fa089e01c83aa2.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/3d08821c33a611e6a1fa089e01c83aa2.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/40188311faf343488db888ad39496f9a.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/40188311faf343488db888ad39496f9a.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/5020170115e016302017012521300000.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/5020170115e016302017012521300000.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/511ead0a000000000000000000000000.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/511ead0a000000000000000000000000.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/655a4b46cd7711eaaafbf382a6988e7b.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/655a4b46cd7711eaaafbf382a6988e7b.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/7778c03fc30c4dd0a319ea29643d4d4b.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/7778c03fc30c4dd0a319ea29643d4d4b.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/7778c03fc30c4dd0a319ea29643d4dc0.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/7778c03fc30c4dd0a319ea29643d4dc0.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/86f623f6a2994dfdb560ffd3e5a62c29.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/86f623f6a2994dfdb560ffd3e5a62c29.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/9073f03a9618383bb1856eb3f990babd.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/9073f03a9618383bb1856eb3f990babd.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/93feffccd8ca11e796c7c7a21acb4932.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/93feffccd8ca11e796c7c7a21acb4932.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/98fb95bcb4bf42d26473eae48690d7ea.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/98fb95bcb4bf42d26473eae48690d7ea.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/c09c9c5daa504b78b0e46eda61556c3a.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/c09c9c5daa504b78b0e46eda61556c3a.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/c1882f2d885e4e13a8c8e2622461b2fa.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/c1882f2d885e4e13a8c8e2622461b2fa.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/d78d338b1ac349e09f65f4efe179739d.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/d78d338b1ac349e09f65f4efe179739d.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/d91f322ad5a441d5955110eda3272fc0.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/d91f322ad5a441d5955110eda3272fc0.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/e5140b3376fa4c63ab18062caab2fb5c.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/e5140b3376fa4c63ab18062caab2fb5c.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/e97c270ea5c44c58bcd3384a2fa2539e.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/e97c270ea5c44c58bcd3384a2fa2539e.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/fc32e4da17d342449b01c992d56d71bf.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/fc32e4da17d342449b01c992d56d71bf.ta \
+    vendor/xiaomi/earth/proprietary/vendor/thh/ta/isee_model.json:$(TARGET_COPY_OUT_VENDOR)/thh/ta/isee_model.json
