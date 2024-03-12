@@ -19,6 +19,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.media.c2@1.2-mediatek-64b \
     vendor/xiaomi/earth/proprietary/vendor/bin/hw/android.hardware.thermal@2.0-service.mtk:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.thermal@2.0-service.mtk \
     vendor/xiaomi/earth/proprietary/vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.usb@1.2-service-mediatekv2 \
+    vendor/xiaomi/earth/proprietary/vendor/bin/hw/camerahalserver:$(TARGET_COPY_OUT_VENDOR)/bin/hw/camerahalserver \
     vendor/xiaomi/earth/proprietary/vendor/bin/hw/mtkfusionrild:$(TARGET_COPY_OUT_VENDOR)/bin/hw/mtkfusionrild \
     vendor/xiaomi/earth/proprietary/vendor/bin/hw/tetheroffloadservice:$(TARGET_COPY_OUT_VENDOR)/bin/hw/tetheroffloadservice \
     vendor/xiaomi/earth/proprietary/vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service \
@@ -281,6 +282,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2@1.2-mediatek.rc \
     vendor/xiaomi/earth/proprietary/vendor/etc/init/android.hardware.thermal@2.0-service.mtk.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.thermal@2.0-service.mtk.rc \
     vendor/xiaomi/earth/proprietary/vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc \
+    vendor/xiaomi/earth/proprietary/vendor/etc/init/camerahalserver.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camerahalserver.rc \
     vendor/xiaomi/earth/proprietary/vendor/etc/init/fuelgauged_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_init.rc \
     vendor/xiaomi/earth/proprietary/vendor/etc/init/fuelgauged_nvram_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_nvram_init.rc \
     vendor/xiaomi/earth/proprietary/vendor/etc/init/gsm0710muxd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/gsm0710muxd.rc \
@@ -329,6 +331,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/etc/virtual-spn-conf-by-imsi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/virtual-spn-conf-by-imsi.xml \
     vendor/xiaomi/earth/proprietary/vendor/firmware/BT_FW.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/BT_FW.cfg \
     vendor/xiaomi/earth/proprietary/vendor/firmware/WIFI_RAM_CODE_soc1_0_1a_1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/WIFI_RAM_CODE_soc1_0_1a_1.bin \
+    vendor/xiaomi/earth/proprietary/vendor/firmware/lib3a.ccu:$(TARGET_COPY_OUT_VENDOR)/firmware/lib3a.ccu \
     vendor/xiaomi/earth/proprietary/vendor/firmware/soc1_0_patch_mcu_1a_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc1_0_patch_mcu_1a_1_hdr.bin \
     vendor/xiaomi/earth/proprietary/vendor/firmware/soc1_0_ram_bt_1a_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc1_0_ram_bt_1a_1_hdr.bin \
     vendor/xiaomi/earth/proprietary/vendor/firmware/soc1_0_ram_mcu_1a_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc1_0_ram_mcu_1a_1_hdr.bin \
@@ -503,7 +506,14 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/lib64/egl/libMEOW_gift.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libMEOW_gift.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/egl/libMEOW_qt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libMEOW_qt.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/egl/libMEOW_trace.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libMEOW_trace.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/hdr_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hdr_preview.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/hi556_ofilm_front_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hi556_ofilm_front_mipi_raw_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/hi556_ofilm_front_mipi_raw_cts_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hi556_ofilm_front_mipi_raw_cts_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/hi556_ofilm_front_mipi_raw_india_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hi556_ofilm_front_mipi_raw_india_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/hi556_ofilm_front_mipi_raw_its_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hi556_ofilm_front_mipi_raw_its_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/hq_algoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hq_algoutils.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so \
@@ -516,24 +526,101 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/lib64/hw/sensors.mt6768.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sensors.mt6768.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/hw/thermal_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/thermal_hal.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.camera.atms@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.camera.atms@1.0-impl.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.camera.isphal@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.camera.isphal@1.0-impl.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/lib3a.ae.core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.ae.core.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/lib3a.ae.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.ae.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/lib3a.af.core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.af.core.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/lib3a.af.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.af.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/lib3a.awb.core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.awb.core.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/lib3a.awb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.awb.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/lib3a.ccudrv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.ccudrv.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/lib3a.ccuif.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.ccuif.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/lib3a.flash.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.flash.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/lib3a.gma.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.gma.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/lib3a.lce.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.lce.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/lib3a.log.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib3a.log.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libDefaultFpsActor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libDefaultFpsActor.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libFrameRecord.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libFrameRecord.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libJpgEncPipe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libJpgEncPipe.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libMNN.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libMNN.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libMNN_CL.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libMNN_CL.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libMNN_Express.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libMNN_Express.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libMNN_Vulkan.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libMNN_Vulkan.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libMtkOmxCore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libMtkOmxCore.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libNoFpsActor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libNoFpsActor.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libOpenCL.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOpenCL.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libSQLiteModule_VER_ALL.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSQLiteModule_VER_ALL.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libSonyIMX230PdafLibrary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSonyIMX230PdafLibrary.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libSonyIMX230PdafLibraryWrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSonyIMX230PdafLibraryWrapper.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libSonyIMX338PdafLibrary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSonyIMX338PdafLibrary.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libSonyIMX338PdafLibraryWrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSonyIMX338PdafLibraryWrapper.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libSonyIMX386PdafLibrary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSonyIMX386PdafLibrary.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libSonyIMX386PdafLibraryWrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSonyIMX386PdafLibraryWrapper.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libSonyIMX519PdafLibrary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSonyIMX519PdafLibrary.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libSonyIMX519PdafLibraryWrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSonyIMX519PdafLibraryWrapper.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libTEECommon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTEECommon.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/lib_bsscore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_bsscore.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/lib_misd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_misd.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libaal_cust.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaal_cust.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libaal_key.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaal_key.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libaal_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaal_mtk.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libaalservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaalservice.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libaedv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaedv.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libarcsoft_beautyshot.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_beautyshot.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libarcsoft_facebeauty.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_facebeauty.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libarcsoft_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_hdr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libarcsoft_hdr_detection.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_hdr_detection.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libarcsoft_high_dynamic_range.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_high_dynamic_range.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libarcsoft_super_night.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_super_night.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libbluetooth_audio_session_mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session_mediatek.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libbluetooth_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_mtk.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libbluetooth_mtk_pure.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_mtk_pure.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-vendor.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libbwc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbwc.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libc++_shared.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++_shared.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.chdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.chdr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.feature_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.feature_utils.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.hal3a.cctsvr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.cctsvr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.hal3a.log.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.log.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.hal3a.v3.dng.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.v3.dng.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.hal3a.v3.lsctbl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.v3.lsctbl.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.hal3a.v3.nvram.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.v3.nvram.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.hal3a.v3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.hal3a.v3.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.halisp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.halisp.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.halsensor.hwintegration.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.halsensor.hwintegration.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.halsensor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.halsensor.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.iopipe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.iopipe.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.pdtblgen.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.pdtblgen.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.utils.sensorprovider.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.utils.sensorprovider.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.vhdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.vhdr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamalgo.3dnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.3dnr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamalgo.dngop.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.dngop.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamalgo.eis.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.eis.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamalgo.fdft.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.fdft.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamalgo.flicker.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.flicker.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamalgo.fsc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.fsc.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamalgo.gyro.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.gyro.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamalgo.ispfeature.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.ispfeature.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamalgo.lmv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.lmv.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamalgo.lsc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.lsc.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamalgo.mfnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.mfnr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamalgo.nr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.nr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamalgo.platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.platform.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamalgo.platform2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.platform2.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamalgo.utility.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.utility.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamalgo.warp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamalgo.warp.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamdrv_imem.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamdrv_imem.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamdrv_isp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamdrv_isp.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamdrv_tuning_mgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamdrv_tuning_mgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcamdrv_twin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamdrv_twin.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcameracustom.eis.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcameracustom.eis.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcameracustom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcameracustom.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libcapctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcapctrl.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libcares_naptr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcares_naptr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libcarrierconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcarrierconfig.so \
@@ -552,6 +639,15 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libconnfem.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libconnfem.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libcurl_xcap_md.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcurl_xcap_md.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libcustom_nvram.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcustom_nvram.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libeffecthal.base.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeffecthal.base.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libfeature.face.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfeature.face.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libfeature.stereo.provider.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfeature.stereo.provider.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libfeature_3dnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfeature_3dnr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libfeature_eis.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfeature_eis.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libfeature_fsc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfeature_fsc.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libfeature_lmv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfeature_lmv.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libfeature_rss.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfeature_rss.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libfeatureiodrv_mem.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfeatureiodrv_mem.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libfile_op.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfile_op.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libforkexecwrap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libforkexecwrap.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libformatter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libformatter.so \
@@ -561,6 +657,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libgralloc_extra.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgralloc_extra.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libgralloc_metadata.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgralloc_metadata.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libgralloctypes_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgralloctypes_mtk.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libgz_gp_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgz_gp_client.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libgz_uree.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgz_uree.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libheichal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libheichal.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libhevce_sb.ca7.android.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhevce_sb.ca7.android.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libhwm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhwm.so \
@@ -569,24 +667,99 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libimageio.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libimageio.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libimageio_plat_drv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libimageio_plat_drv.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libimageio_plat_pipe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libimageio_plat_pipe.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libimgsensorca.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libimgsensorca.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libimsg_log.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libimsg_log.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libion_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libion_mtk.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libion_ulit.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libion_ulit.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libipsec_ims_shr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libipsec_ims_shr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libispcameraca.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libispcameraca.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libjpeg-alpha-oal_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libjpeg-alpha-oal_vendor.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libjpeg-alpha_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libjpeg-alpha_vendor.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libksensor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libksensor.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libladder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libladder.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/liblpcnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblpcnr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmfllcore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmfllcore.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmi_bokehcap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmi_bokehcap.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmi_bokehpre.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmi_bokehpre.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmialgo_ai_vision.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmialgo_ai_vision.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmialgo_aio_seg.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmialgo_aio_seg.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmialgo_sd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmialgo_sd.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmialgo_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmialgo_utils.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libmipc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmipc.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmiphone_capture_bokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmiphone_capture_bokeh.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmiphone_preview_bokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmiphone_preview_bokeh.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libmml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmml.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libmnetlink_v104.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmnetlink_v104.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmpbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmpbase.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmsnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmsnr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libmtcloader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtcloader.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libmtk-ril.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtk-ril.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkares.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkares.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam.atmseventmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam.atmseventmgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam.eventcallback.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam.eventcallback.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam.featurepipe.capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam.featurepipe.capture.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam.featurepipe.streaming.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam.featurepipe.streaming.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam.featurepipe.vsdof_util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam.featurepipe.vsdof_util.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam.logicalmodule.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam.logicalmodule.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_3rdparty.core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_3rdparty.core.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_3rdparty.customer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_3rdparty.customer.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_3rdparty.mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_3rdparty.mtk.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_3rdparty.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_3rdparty.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_calibration_convertor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_calibration_convertor.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_calibration_provider.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_calibration_provider.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_debugutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_debugutils.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_device3_app.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_device3_app.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_device3_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_device3_hal.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_device3_hidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_device3_hidl.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_device3_hidlutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_device3_hidlutils.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_device3_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_device3_utils.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_devicesessionpolicy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_devicesessionpolicy.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_diputils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_diputils.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_exif.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_exif.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_fdvt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_fdvt.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_featurepolicy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_featurepolicy.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_featureutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_featureutils.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_fwkutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_fwkutils.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_grallocutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_grallocutils.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_hwnode.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_hwnode.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_hwutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_hwutils.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_imem.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_imem.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_imgbuf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_imgbuf.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_metadata.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_metadata.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_metastore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_metastore.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_modulefactory_aaa.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_modulefactory_aaa.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_modulefactory_custom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_modulefactory_custom.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_modulefactory_drv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_modulefactory_drv.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_modulefactory_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_modulefactory_utils.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_modulehelper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_modulehelper.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_pipeline.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipeline.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_pipeline_fbm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipeline_fbm.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_pipelinemodel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinemodel.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_pipelinemodel_adapter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinemodel_adapter.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_pipelinemodel_capture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinemodel_capture.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_pipelinemodel_isp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinemodel_isp.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_pipelinemodel_session.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinemodel_session.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_pipelinemodel_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinemodel_utils.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_pipelinemodel_zsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinemodel_zsl.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_pipelinepolicy-aov.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinepolicy-aov.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_pipelinepolicy-security.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinepolicy-security.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_pipelinepolicy-smvr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinepolicy-smvr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_pipelinepolicy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinepolicy.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_pipelinepolicy_factory.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_pipelinepolicy_factory.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_prerelease.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_prerelease.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_rsc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_rsc.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_scenariorecorder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_scenariorecorder.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_stdutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_stdutils.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_streamutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_streamutils.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_synchelper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_synchelper.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_sysutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_sysutils.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_tuning_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_tuning_utils.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcam_ulog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam_ulog.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkconfig.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkconfigutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkconfigutils.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkcutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcutils.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkhardware_legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkhardware_legacy.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkisp_metadata.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkisp_metadata.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libmtknetcap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtknetcap.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libmtknetutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtknetutils.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libmtkperf_client_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkperf_client_vendor.so \
@@ -611,6 +784,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libsensor_custom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor_custom.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libsl_fp_impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsl_fp_impl.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libstagefrighthw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefrighthw.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libstereoinfoaccessor_vsdof.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstereoinfoaccessor_vsdof.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libstorage_otp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstorage_otp.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libsysenv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsysenv.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libteei_daemon_vfs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libteei_daemon_vfs.so \
@@ -628,9 +802,43 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libdpframework.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdpframework.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libmtk_drvb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtk_drvb.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libpq_prot.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpq_prot.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/mtkcam/libmtkcam_streaminfo_plugin-p1stt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mtkcam/libmtkcam_streaminfo_plugin-p1stt.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5k5e9_sunny_front_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5k5e9_sunny_front_mipi_raw_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5k5e9_sunny_front_mipi_raw_cts_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5k5e9_sunny_front_mipi_raw_cts_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5k5e9_sunny_front_mipi_raw_india_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5k5e9_sunny_front_mipi_raw_india_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5k5e9_sunny_front_mipi_raw_its_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5k5e9_sunny_front_mipi_raw_its_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjn1_acc_main_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjn1_acc_main_mipi_raw_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjn1_acc_main_mipi_raw_cts_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjn1_acc_main_mipi_raw_cts_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjn1_acc_main_mipi_raw_india_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjn1_acc_main_mipi_raw_india_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjn1_acc_main_mipi_raw_its_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjn1_acc_main_mipi_raw_its_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_acc_main_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_acc_main_mipi_raw_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_acc_main_mipi_raw_cts_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_acc_main_mipi_raw_cts_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_acc_main_mipi_raw_india_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_acc_main_mipi_raw_india_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_acc_main_mipi_raw_its_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_acc_main_mipi_raw_its_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_ofilm_main_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_ofilm_main_mipi_raw_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_ofilm_main_mipi_raw_cts_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_ofilm_main_mipi_raw_cts_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_ofilm_main_mipi_raw_india_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_ofilm_main_mipi_raw_india_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_ofilm_main_mipi_raw_its_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_ofilm_main_mipi_raw_its_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_sunny_main_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_sunny_main_mipi_raw_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_sunny_main_mipi_raw_cts_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_sunny_main_mipi_raw_cts_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_sunny_main_mipi_raw_india_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_sunny_main_mipi_raw_india_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_sunny_main_mipi_raw_its_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_sunny_main_mipi_raw_its_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/sc500cs_truly_front_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sc500cs_truly_front_mipi_raw_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/sc500cs_truly_front_mipi_raw_cts_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sc500cs_truly_front_mipi_raw_cts_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/sc500cs_truly_front_mipi_raw_india_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sc500cs_truly_front_mipi_raw_india_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/sc500cs_truly_front_mipi_raw_its_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sc500cs_truly_front_mipi_raw_its_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/sensors.camera.light.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.camera.light.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.atms@1.0.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.bgservice@1.1.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.camera.security@1.0.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.clientapi@1.0.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.composer_ext@1.0.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.mmagent@1.0.so \
