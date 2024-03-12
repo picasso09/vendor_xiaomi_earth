@@ -284,6 +284,13 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/etc/audio_param_global/VolumeGainMap_ParamUnitDesc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param_global/VolumeGainMap_ParamUnitDesc.xml \
     vendor/xiaomi/earth/proprietary/vendor/etc/audio_param_global/Volume_AudioParam.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param_global/Volume_AudioParam.xml \
     vendor/xiaomi/earth/proprietary/vendor/etc/audio_param_global/Volume_ParamUnitDesc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param_global/Volume_ParamUnitDesc.xml \
+    vendor/xiaomi/earth/proprietary/vendor/etc/camera/768_seg_without_det_with_softmax.mnn.tempcache:$(TARGET_COPY_OUT_VENDOR)/etc/camera/768_seg_without_det_with_softmax.mnn.tempcache \
+    vendor/xiaomi/earth/proprietary/vendor/etc/camera/aivsModels1:$(TARGET_COPY_OUT_VENDOR)/etc/camera/aivsModels1 \
+    vendor/xiaomi/earth/proprietary/vendor/etc/camera/aivsParams:$(TARGET_COPY_OUT_VENDOR)/etc/camera/aivsParams \
+    vendor/xiaomi/earth/proprietary/vendor/etc/camera/aivsParams2:$(TARGET_COPY_OUT_VENDOR)/etc/camera/aivsParams2 \
+    vendor/xiaomi/earth/proprietary/vendor/etc/camera/dualcam_bokeh_params.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/dualcam_bokeh_params.json \
+    vendor/xiaomi/earth/proprietary/vendor/etc/camera/dualcam_bokeh_params_front.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/dualcam_bokeh_params_front.json \
+    vendor/xiaomi/earth/proprietary/vendor/etc/camera/preview_bokeh_params.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/preview_bokeh_params.json \
     vendor/xiaomi/earth/proprietary/vendor/etc/ecc_list.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list.xml \
     vendor/xiaomi/earth/proprietary/vendor/etc/ecc_list_OP01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP01.xml \
     vendor/xiaomi/earth/proprietary/vendor/etc/ecc_list_OP02.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP02.xml \
