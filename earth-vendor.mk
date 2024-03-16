@@ -552,6 +552,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/lib64/hi556_ofilm_front_mipi_raw_cts_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hi556_ofilm_front_mipi_raw_cts_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/hi556_ofilm_front_mipi_raw_india_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hi556_ofilm_front_mipi_raw_india_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/hi556_ofilm_front_mipi_raw_its_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hi556_ofilm_front_mipi_raw_its_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/hi556_ofilm_front_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hi556_ofilm_front_mipi_raw_tuning.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/hq_algoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hq_algoutils.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so \
@@ -625,6 +626,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libarcsoft_hdr_detection.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_hdr_detection.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libarcsoft_high_dynamic_range.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_high_dynamic_range.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libarcsoft_super_night.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_super_night.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libarcsoft_supernight.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_supernight.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libbluetooth_audio_session_mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session_mediatek.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libbluetooth_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_mtk.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libbluetooth_mtk_pure.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_mtk_pure.so \
@@ -643,6 +645,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.halsensor.hwintegration.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.halsensor.hwintegration.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.halsensor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.halsensor.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.iopipe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.iopipe.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.lcs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.lcs.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.pdtblgen.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.pdtblgen.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.utils.sensorprovider.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.utils.sensorprovider.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/libcam.vhdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.vhdr.so \
@@ -858,26 +861,32 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5k5e9_sunny_front_mipi_raw_cts_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5k5e9_sunny_front_mipi_raw_cts_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5k5e9_sunny_front_mipi_raw_india_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5k5e9_sunny_front_mipi_raw_india_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5k5e9_sunny_front_mipi_raw_its_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5k5e9_sunny_front_mipi_raw_its_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5k5e9_sunny_front_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5k5e9_sunny_front_mipi_raw_tuning.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjn1_acc_main_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjn1_acc_main_mipi_raw_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjn1_acc_main_mipi_raw_cts_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjn1_acc_main_mipi_raw_cts_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjn1_acc_main_mipi_raw_india_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjn1_acc_main_mipi_raw_india_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjn1_acc_main_mipi_raw_its_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjn1_acc_main_mipi_raw_its_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjn1_acc_main_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjn1_acc_main_mipi_raw_tuning.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_acc_main_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_acc_main_mipi_raw_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_acc_main_mipi_raw_cts_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_acc_main_mipi_raw_cts_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_acc_main_mipi_raw_india_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_acc_main_mipi_raw_india_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_acc_main_mipi_raw_its_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_acc_main_mipi_raw_its_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_acc_main_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_acc_main_mipi_raw_tuning.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_ofilm_main_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_ofilm_main_mipi_raw_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_ofilm_main_mipi_raw_cts_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_ofilm_main_mipi_raw_cts_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_ofilm_main_mipi_raw_india_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_ofilm_main_mipi_raw_india_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_ofilm_main_mipi_raw_its_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_ofilm_main_mipi_raw_its_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_ofilm_main_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_ofilm_main_mipi_raw_tuning.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_sunny_main_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_sunny_main_mipi_raw_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_sunny_main_mipi_raw_cts_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_sunny_main_mipi_raw_cts_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_sunny_main_mipi_raw_india_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_sunny_main_mipi_raw_india_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_sunny_main_mipi_raw_its_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_sunny_main_mipi_raw_its_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/s5kjns_sunny_main_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/s5kjns_sunny_main_mipi_raw_tuning.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/sc500cs_truly_front_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sc500cs_truly_front_mipi_raw_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/sc500cs_truly_front_mipi_raw_cts_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sc500cs_truly_front_mipi_raw_cts_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/sc500cs_truly_front_mipi_raw_india_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sc500cs_truly_front_mipi_raw_india_IdxMgr.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/sc500cs_truly_front_mipi_raw_its_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sc500cs_truly_front_mipi_raw_its_IdxMgr.so \
+    vendor/xiaomi/earth/proprietary/vendor/lib64/sc500cs_truly_front_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sc500cs_truly_front_mipi_raw_tuning.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/sensors.camera.light.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.camera.light.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so \
     vendor/xiaomi/earth/proprietary/vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so \
