@@ -30,7 +30,7 @@
         <Video name="c2.mtk.hevc.decoder"
                type="video/hevc"
                driverIntf="v4l2"
-               maxConcurrentInstances="32"
+               maxConcurrentInstances="16"
                colorConvertPixelFormat="4096" />
         <Video name="c2.mtk.hevc.decoder.secure"
                type="video/hevc"
@@ -65,27 +65,27 @@
         <Video name="c2.mtk.h263.encoder"
                type="video/3gpp"
                driverIntf="v4l2"
-               maxConcurrentInstances="10"
+               maxConcurrentInstances="5"
                canSwapWidthHeight="true" />
         <Video name="c2.mtk.mpeg4.encoder"
                type="video/mp4v-es"
                driverIntf="v4l2"
-               maxConcurrentInstances="10"
+               maxConcurrentInstances="5"
                canSwapWidthHeight="true" />
         <Video name="c2.mtk.avc.encoder"
                type="video/avc"
                driverIntf="v4l2"
-               maxConcurrentInstances="10"
+               maxConcurrentInstances="5"
                canSwapWidthHeight="true" />
         <Video name="c2.mtk.avc.encoder.secure"
                type="video/avc"
                driverIntf="v4l2"
-               maxConcurrentInstances="10"
+               maxConcurrentInstances="5"
                canSwapWidthHeight="true" />
         <Video name="c2.mtk.hevc.encoder"
                type="video/hevc"
                driverIntf="v4l2"
-               maxConcurrentInstances="10"
+               maxConcurrentInstances="5"
                canSwapWidthHeight="true" />
     </Encoders>
 </MediaCodecs>

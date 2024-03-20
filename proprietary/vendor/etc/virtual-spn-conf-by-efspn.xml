@@ -17,6 +17,7 @@
 <virtualSpnOverride mccmncspn="22201tiscalimobile" name="Tiscali Mobile"/>
 <virtualSpnOverride mccmncspn="22201COOP" name="Coop"/>
 <virtualSpnOverride mccmncspn="22201Noverca" name="Noverca"/>
+<virtualSpnOverride mccmncspn="22201Kena Mobile" name="Kena Mobile"/>
 <virtualSpnOverride mccmncspn="22207Noverca" name="Noverca"/>
 <virtualSpnOverride mccmncspn="22210BT Italia" name="BT Italia Mobile"/>
 <virtualSpnOverride mccmncspn="22210ERG" name="ERG Mobile"/>
